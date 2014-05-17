@@ -1,6 +1,25 @@
 ---
 layout: default
 ---
+ <style>
+    body { background-color: #22313F;}
+    #mobile-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      background-color: #22313F;
+      width: 100%;
+      padding-top: 25px;
+      padding-bottom: 20px;
+      height: 25px;
+      z-index: 40;
+    }
+    @media only screen and (max-width: 767px){
+      #mobile-header {
+        display: block;
+      }
+    }
+  </style>
 <div class="two columns cover-image post-page" style="background-image: url({{ page.header }}); width: 100%; height: 100%;
 ">
 </div>
