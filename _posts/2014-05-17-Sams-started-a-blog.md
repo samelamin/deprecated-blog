@@ -7,13 +7,13 @@ tags: []
 ---
 #### Hi Folks,
 
-So after attending and watching multiple conferences and talks I decided to create my own blog. Expect ramblings of a very passionate developer which go into detail about everyday pains we all feel as software developers.
+So after attending and watching multiple conferences and talks I decided to create my own blog. Expect ramblings of a very passionate developer which go into detail about everyday pains we all feel in IT.
 
-There were multiple contenders to what I can ramble on for my first post, there is the whole "Is TDD Dead" or shall I throw my hat at "Continuous Delivery vs Continuous Deployment" or maybe even give my thoughts on some Agile process.
+There were multiple contenders to what I can ramble on for my first post, there is the whole "Is TDD Dead" or shall I throw my hat at "Continuous Delivery vs Continuous Deployment" or maybe even give my thoughts on some Agile processes.
 
 After much deliberation I decided it will be fitting to write about the issues I face everyday. Anyone who works in a team that has to collaborate with other teams, especially in a corporate environment will be able to relate.
 
-Before I start my rant I feel like I should give all of you some background, up until a few months ago the process in our team was to write a feature then throw it over the wall to the QAs to test/automate. This means that code builds and deploys from TeamCity then once the feature is on an environment the QAs come into play and run regression tests on it.
+Before I start my rant I feel like I should give all of you some background, up until a few months ago the process in our team was to write a feature then throw it over the wall to the QAs to test/automate. This means that code builds and deploys from TeamCity to a environment, afterwards the QAs come into play and run regression tests on it.
 
 Everyday I argue over why we need to move the tests from Jenkins to TeamCity and why we need to fail fast! Passing a feature over to QAs only to wait days to have them push it back because it broke something that isn't related is not ideal.
 
