@@ -1,0 +1,16 @@
+name: Sam's Rants
+author: Hussam (Sam) Elamin
+markdown: redcarpet
+pygments: true
+description: I'm an software developer who's lived in the UAE, Malaysia and now settled in London I have been working with the full stack of web development specializing in .NET.
+greeting_title: Hi, I'm Sam.
+greeting_text: I'm an developer and I love Agile, TDD, Continuous Delivery and clean code. But over all the software craftsmanship movement.
+github: http://www.github.com/samelamin
+linkedin: uk.linkedin.com/pub/sam-elamin/26/a4a/1ab/
+twitter: http://www.twitter.com/samelamin
+email: hussam.elamin@gmail.com
+location: 42°2'16"N   70°12'47"W
+disqus: samelamin
+
+##Make sure to edit the above fields, especially for disqus. 
+
