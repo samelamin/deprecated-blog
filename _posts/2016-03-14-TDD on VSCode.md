@@ -9,7 +9,7 @@ tags: [unit testing, DotNetCore ]
 
 Dot Net Core is finally in release candidate, the .Net community have been waiting for ages for this to come out! Cross platform is something everyone is excited about and its been a lot of confusion when it comes to the latest version of .Net. We went from vNext to .Net 5 to .Net Core 1.0
 
-And for this new cross platform world, we have a new IDE! [VS Code](https://goo.gl/Th9qSO) while this new IDE is much more light weight than the Visual Studio we are used to on Windows, it takes a bit of getting used to.
+And for this new cross platform world, we have a new code editor! [VS Code](https://goo.gl/Th9qSO) while this isn't technically an IDE - it is much more light weight than the Visual Studio we are used to on Windows, it takes a bit of getting used to.
 
 I wont go into much detail to why VS code is different than Visual Studio and why Microsoft have launched it. There are plenty of articles out there which do it far more justice than I ever could.
 
