@@ -3,9 +3,9 @@ layout: post
 title: "TDD on Visual Studio Code"
 description: ""
 category:
-tags: []
+tags: [unit testing, DotNetCore ]
 ---
-#### VS Code,TDD,GulpJS and more buzzwords,
+#### VS Code,TDD,GulpJS and more buzzwords
 
 Dot Net Core is finally in release candidate, the .Net community have been waiting for ages for this to come out! Cross platform is something everyone is excited about and its been a lot of confusion when it comes to the latest version of .Net. We went from vNext to .Net 5 to .Net Core 1.0
 
@@ -17,9 +17,9 @@ From here on in I will assume you have VS code installed on your machine
 
 Unfortunately for those of you (including myself) who are new to using VS Code you will find a few subtle changes, for example you cant just build your solution with a shortcut like you do on Windows.
 
-Another thing is it doesn't have a built in test runner yet.
+Another thing is it doesn't have a built in test runner yet, so unit testing your code is a bit difficult for those of use used to having resharper a shortcut away, but not impossible.
 
-The aim of this blog post is to walk you through doing TDD on it.
+The aim of this blog post is to walk you through doing TDD on it
 
 For anyone doing TDD, [NCrunch](http://www.ncrunch.net/) is a must! The ability to make any code change and have all your tests run automatically changes the way you code completely, the immediate feedback is immense!
 
@@ -55,6 +55,8 @@ npm install gulp -g
 npm install gulp-shell -g
 npm install gulp-watch -g
 ```
+
+*FYI there is also a gulp plugin for ASP.NET 5 [here](https://www.npmjs.com/package/gulp-dnx) that does this and more but for the purposes of this tutorial I thought it best to keep it simple*
 
 Next we will set up a build task, if you press Ctrl+Shift+B VS Code will complain and say no task runner is configured, click on "Configure Now". This will create a **tasks.json** file. Here is where we will define what tasks to run. Replace the contents of the file with the JSON below
 
@@ -123,4 +125,6 @@ Finally lets test this change, navigate to **SampleTests.CS** and add a failing 
 
 Once you save the file you should see the test task being kicked off!
 
-And that's it! Comments are more than welcome and if you enjoyed doing this tutorial please do share it
+FYI if you are into shell scripts you can also do all this using [this](https://goo.gl/V9Afuf)
+
+And that's it! Feedback is really appreciated so feel free to leave a comment below, and if you enjoyed this tutorial please do share it
