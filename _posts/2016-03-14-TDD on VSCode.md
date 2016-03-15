@@ -38,18 +38,22 @@ This checks out the code which contains a **CoreConsoleApp** and **CoreConsoleAp
 
 Now we need to install [gulp](http://gulpjs.com/) which we will use as a task runner.
 
-To do that we open up the terminal and navigate to the root folder of the repo and install gulp and gulp-shell using the below command
+To do that we open up the terminal and navigate to the root folder of the repo and install gulp, gulp-shell and gulp-watch using the below command
 
 ```
 npm install gulp
 npm install gulp-shell
+npm install gulp-watch
 ```
+
+**Gulp shell** will be used to run shell commands defined in the grunt file, while **gulp-watch** will be used to continually monitor for file changes
 
 This will install all gulp locally but chances are you might want to run gulp from the terminal so you will have to install it again globally using the below command
 
 ```
 npm install gulp -g
 npm install gulp-shell -g
+npm install gulp-watch -g
 ```
 
 Next we will set up a build task, if you press ctrl+shift+B VS Code will complain and say no task runner is configured, click on "Configure Now". This will create a **tasks.json** file. Here is where we will define what tasks to run. Replace the contents of the file with the JSON below
@@ -69,3 +73,56 @@ Next we will set up a build task, if you press ctrl+shift+B VS Code will complai
     ]
 }
 ```
+
+This basically tells VS Code that we want the default build command to run a task **default**
+
+The next step is to define the task and what it does, we do this via a gulp file
+
+Create a new file on the root directory and call it **gruntfile.js** this file will contain all the task definitions we want
+
+paste this into the file
+
+
+``` javascript
+var gulp = require('gulp');
+ shell = require('gulp-shell');
+ watch = require('gulp-watch');
+
+gulp.task('default', ['restore','build', 'watch']);
+
+gulp.task('restore', shell.task([
+  'dnu restore ./src/CoreConsoleApp*'
+]));
+
+gulp.task('build', shell.task([
+  'dnu build ./src/CoreConsoleApp*'
+]));
+
+gulp.task('test', shell.task([
+  'dnx -p ./src/*.Tests/ test'
+]));
+
+gulp.task('watch', function () {
+  gulp.watch('./src/*/*.cs', ['test']);
+});
+```
+
+
+This file basically says that our default tasks are to restore packages, build the solution and watch for changes in any files ending with **.cs**
+
+Now try building your solution using **CTRL + SHIFT + B** the task will continually run on the background after the solution was saved.
+
+
+Finally lets test this change, navigate to **SampleTests.CS** and add a failing test
+
+```cs
+        [Fact]
+        public void FailingTest()
+        {
+            Assert.Equal(5, Add(2, 2));
+        }
+```
+
+Once you save the file you should see the test task being kicked off!
+
+And thats it! Comments are more than welcome and if you enjoyed doing this tutorial please do share it
