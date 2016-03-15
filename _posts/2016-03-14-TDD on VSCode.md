@@ -7,23 +7,23 @@ tags: []
 ---
 #### VS Code,TDD,GulpJS and more buzzwords,
 
-Dot Net Core is finally in release candidate, the .Net community have been waiting for ages for this to come out! Cross platform is something everyone is excited about and its been a lot of confusion when it comes to the latest version of .net. We went from vNext to .Net 5 to .Net Core
+Dot Net Core is finally in release candidate, the .Net community have been waiting for ages for this to come out! Cross platform is something everyone is excited about and its been a lot of confusion when it comes to the latest version of .Net. We went from vNext to .Net 5 to .Net Core 1.0
 
-And for this new cross platform world, we have a new IDE! [VS Code](https://goo.gl/Th9qSO) while this new IDE is much more light weight than the Visual Studio we are used to on Windows, it takes a bit to get used to.
+And for this new cross platform world, we have a new IDE! [VS Code](https://goo.gl/Th9qSO) while this new IDE is much more light weight than the Visual Studio we are used to on Windows, it takes a bit of getting used to.
 
 I wont go into much detail to why VS code is different than Visual Studio and why Microsoft have launched it. There are plenty of articles out there which do it far more justice than I ever could.
 
-From here on in I am going to assume you have VS code installed on your machine
+From here on in I will assume you have VS code installed on your machine
 
 Unfortunately for those of you (including myself) who are new to using VS Code you will find a few subtle changes, for example you cant just build your solution with a shortcut like you do on Windows.
 
-Another thing is it doesn't have a built it test runner yet.
+Another thing is it doesn't have a built in test runner yet.
 
-the aim of this blog post is to walk you through doing TDD on it.
+The aim of this blog post is to walk you through doing TDD on it.
 
-For anyone doing TDD, [NCrunch](http://www.ncrunch.net/) is a must, the ability to save your files and have all your tests run automatically changes the way you code completely, the immediate feedback is immense!
+For anyone doing TDD, [NCrunch](http://www.ncrunch.net/) is a must! The ability to make any code change and have all your tests run automatically changes the way you code completely, the immediate feedback is immense!
 
-So to start off with we need a working environment, for this tutorial we will be using a Mac.
+So to start off with we need a working environment, for this tutorial we will be using a Mac but because we are working with cross platform tools, your platform of choice shouldn't matter much.
 
 First make sure you have VS Code and .Net core installed on your machine, you can follow this [guide](http://docs.asp.net/en/latest/getting-started/installing-on-mac.html)
 
@@ -34,7 +34,7 @@ Next we check out my sample code using the below command
 git clone https://github.com/samelamin/VSCodeTDDTutorial
 ```
 
-This checks out the code which contains a **CoreConsoleApp** and **CoreConsoleApp.Tests** projects
+This checks out the code which contains a **CoreConsoleApp** and **CoreConsoleApp.Tests** a project
 
 Now we need to install [gulp](http://gulpjs.com/) which we will use as a task runner.
 
@@ -46,9 +46,9 @@ npm install gulp-shell
 npm install gulp-watch
 ```
 
-**Gulp shell** will be used to run shell commands defined in the grunt file, while **gulp-watch** will be used to continually monitor for file changes
+**gulp shell** will be used to run shell commands defined in the gulp file, while **gulp-watch** will be used to continually monitor for file changes
 
-This will install all gulp locally but chances are you might want to run gulp from the terminal so you will have to install it again globally using the below command
+VS Code needs all packages to be installed locally but chances are you might want to run gulp from the terminal so you will have to install it again globally using the below command
 
 ```
 npm install gulp -g
@@ -56,7 +56,7 @@ npm install gulp-shell -g
 npm install gulp-watch -g
 ```
 
-Next we will set up a build task, if you press ctrl+shift+B VS Code will complain and say no task runner is configured, click on "Configure Now". This will create a **tasks.json** file. Here is where we will define what tasks to run. Replace the contents of the file with the JSON below
+Next we will set up a build task, if you press Ctrl+Shift+B VS Code will complain and say no task runner is configured, click on "Configure Now". This will create a **tasks.json** file. Here is where we will define what tasks to run. Replace the contents of the file with the JSON below
 
 ``` javascript
 {
@@ -78,7 +78,7 @@ This basically tells VS Code that we want the default build command to run a tas
 
 The next step is to define the task and what it does, we do this via a gulp file
 
-Create a new file on the root directory and call it **gruntfile.js** this file will contain all the task definitions we want
+Create a new file on the root directory and call it **gulpfile.js** this file will contain all the task definitions we want
 
 paste this into the file
 
@@ -107,11 +107,9 @@ gulp.task('watch', function () {
 });
 ```
 
-
 This file basically says that our default tasks are to restore packages, build the solution and watch for changes in any files ending with **.cs**
 
 Now try building your solution using **CTRL + SHIFT + B** the task will continually run on the background after the solution was saved.
-
 
 Finally lets test this change, navigate to **SampleTests.CS** and add a failing test
 
@@ -125,4 +123,4 @@ Finally lets test this change, navigate to **SampleTests.CS** and add a failing 
 
 Once you save the file you should see the test task being kicked off!
 
-And thats it! Comments are more than welcome and if you enjoyed doing this tutorial please do share it
+And that's it! Comments are more than welcome and if you enjoyed doing this tutorial please do share it
