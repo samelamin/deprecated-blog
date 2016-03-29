@@ -21,7 +21,7 @@ For one thing it is very difficult to put in detailed feedback onto cards, some 
 
 Another reason is how do you measure success? Sure if you delivered a talk and everyone enjoyed it then you succeeded for that particular conference? How does it ensure you will succeed at the next conference?
 
-I feel like as a conference attendee I want to go to a conference and have atleast 90% talks where I leave the talk saying "Wow that was amazing!" I never thought about things that way". While this is extremely optimistic and unrealistic its still  a goal I try to aim for when doing a talk
+I feel like as a conference attendee I want to go to a conference and have at least 90% talks where I leave the talk saying "Wow that was amazing!" I never thought about things that way". While this is extremely optimistic and unrealistic it's still a goal I try to aim for when doing a talk
 
 Which brings me to a side point. I think we are in a very unique industry where we learn from our failures, no other industry has that. I am sure anyone in IT has a memory etched in his brain about a failure that taught them alot. As such if I am  speaking at a conference I would like to talk about my failures. A question I always ask at interviews is what technology/framework/{insert random tech thing here} do you like? and what do you hate about it? If the interviewee cant demonstrate what they hate about it, then they have not used it enough in anger! They haven't failed enough on it
 
