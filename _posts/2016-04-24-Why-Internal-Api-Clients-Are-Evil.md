@@ -21,7 +21,7 @@ So the team suggests a solution
 
 On the surface that seems fine, so say Team A publishes 3 or 4 clients/packages for each API, then Team B does the same. Weeks - or even monts on some cases - go by and some developers say "we keep rewriting these clients and we have lot of duplication lets create a base client that all new clients derive from, you know, DRY and all that. Again this in principle sounds fine
 
-#### All is not as it seems
+#### All is not what is seems
 
  
  So now we have all teams using the same base client that implements all the required headers (if you are so inclined) and we have consistency throughout the platform right?
