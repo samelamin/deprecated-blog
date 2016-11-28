@@ -53,6 +53,9 @@ So we are basically paying for the convience of not having to worry about our da
 Now engineers don’t have to worry about things like defragmentation, index rebuilds, and data file space, let alone infrastructure components like disk, RAID, Ubuntu kernel versions, etc. Whole classes of problems are transitioned to the cloud provider.
 
 #### Wrapping up
-In summary, I think the days of hiring an expert to do your DB admin are on the decline. I will think we are still a way from the career being completly dead giving the multitude of companies that need it
+In summary, DBAs might not be dead but the role certainly is evolving, and those who dont start expanding their skillset might be in danger
+
+I think the days of hiring an expert to do your DB admin are on the decline. I will think we are still a way from the career being completly dead giving the multitude of companies that need it
 But if someone comes to me and says "Hi Sam I am thinking of a career of a DBA" I would say there might be better options out there
+
 
